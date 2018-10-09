@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  
+  bitrix-env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    cap_add:
+      - SYS_ADMIN
+    tmpfs:
+      - /run
+    tty: true
+    stdin_open: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+#      - /var/www:/home/bitrix/www
