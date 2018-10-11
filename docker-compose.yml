@@ -12,6 +12,7 @@ services:
       - /run
     tty: true
     stdin_open: true
+    mem_limit: '1g'
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 #      - /var/www:/home/bitrix/www
