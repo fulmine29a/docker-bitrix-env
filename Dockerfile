@@ -5,7 +5,7 @@ ENV SSH_PASS="bitrix" \
     container="docker"\
     MEMORY_LIMIT="1048000"
 
-COPY scripts/firstboot.sh /root
+COPY scripts/ /root/
 
 RUN adduser bitrix && \
     echo "bitrix:$SSH_PASS" | chpasswd && \
